@@ -1,0 +1,27 @@
+{
+  "name": "jeopardy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/serve & node_modules/.bin/node-sass styles/styles.scss styles/styles.css -w & node_modules/.bin/watchify app.module.js -o bundle.js",
+    "bundle": "./node_modules/.bin/browserify --entry app.module.js -o bundle.js",
+    "watch": "./node_modules/.bin/watchify --entry app.module.js -o bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.2",
+    "underscore": "^1.8.3",
+    "angular": "^1.5.2",
+    "angular-route": "^1.5.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "node-sass": "^3.4.2",
+    "serve": "^1.4.0",
+    "watchify": "^3.7.0"
+  }
+}

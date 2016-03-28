@@ -1,0 +1,77 @@
+#bg {
+  background-color: black;
+}
+
+#score {
+  color: white;
+  font-size: 32px;
+  font-family: Impact;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  color: white;
+  font-size: 54px;
+  font-family: 'Impact', 'Helvetica', sans-serif;;
+  font-weight: 800;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+clue-card {
+  width: 100%;
+  height: 115px;
+  background-color: blue;
+}
+
+li {
+  width: 100%;
+  height: 95px;
+  background-color: blue;
+  margin: 10px;
+  padding: 8px;
+  .card-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &.category {
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+}
+
+.modal-content {
+  .modal-footer {
+    background: black;
+    border: none;
+  }
+  input {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+.modal-body {
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  background: blue;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+  line-height: 1.1;
+  height: 400px;
+  div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  p {
+    padding: 0 95px;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
+  }
+}
