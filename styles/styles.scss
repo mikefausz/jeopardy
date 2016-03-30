@@ -1,57 +1,141 @@
-#bg {
-  background-color: black;
+$grey: #E2E2FF;
+
+.bg {
+  height: 100%;
 }
 
-#score {
-  color: white;
-  font-size: 32px;
-  font-family: Impact;
-  text-align: center;
+.bg#home {
+  background: url('http://cenblog.org/iyc-2011/files/2011/06/JE2010_HeroHR_RGB-21.jpg');
+  background-size: cover;
+  h1 {
+    position: absolute;
+    font-family: 'Gyparody', Impact;
+    color: $grey;
+    font-size: 48px;
+    bottom: 5%;
+    left: 47%;
+    text-shadow: 0px 0px 13px rgba(0, 0, 0, 1);
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+.bg#game {
+  background: url('http://media3.s-nbcnews.com/i/MSNBC/Components/Video/__NEW/tdy_tren_trebek_140107.jpg');
+  background-size: 100%;
+  .container {
+    width: 890px;
+  }
+}
+
+#game header {
+  color: $grey;
+  font-size: 48px;
+  padding: 24px;
+  font-family: 'Gyparody', Impact;
+  text-shadow: 0px 0px 13px rgba(0, 0, 0, 1);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  div {
+    display: inline-block;
+    width: 30%;
+  }
+}
+
+#quit {
+  text-align: right;
+}
+
+#logo-box {
+  height: 10%;
+  img {
+    height: 100%;
+  }
+}
+#quit a {
+  text-align: right;
+  color: $grey;
+  text-decoration: none;
+  &:hover {
+    color: blue;
+  }
+}
+
+ #gameboard {
+   background: black;
+ }
+
+.col-6 {
+  display: inline-block;
+  width: 15.5%;
+  margin: .5%;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
   color: white;
-  font-size: 54px;
+  font-size: 48px;
   font-family: 'Impact', 'Helvetica', sans-serif;;
   font-weight: 800;
-  text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
   text-align: center;
-}
-
-clue-card {
-  width: 100%;
-  height: 115px;
-  background-color: blue;
 }
 
 li {
   width: 100%;
-  height: 95px;
+  height: 74px;
   background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
   margin: 10px;
-  padding: 8px;
-  .card-container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  &.category {
-    font-size: 24px;
-    text-transform: uppercase;
+}
+
+clue-card {
+  width: 100%;
+  background-color: blue;
+  li {
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 1);
+    &:hover {
+      cursor: pointer;
+      background-color: navy;
+    }
   }
 }
 
+.category {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+
+#myModal {
+  top: 10%;
+}
+
 .modal-content {
+  .modal-header {
+    background: black;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Impact;
+    font-size: 36px;
+    border: none;
+  }
   .modal-footer {
     background: black;
     border: none;
+    text-align: center;
+  }
+  form {
+    display: inline-block;
   }
   input {
-    width: 50%;
-    margin: auto;
+    margin: 0 10px;
   }
 }
 

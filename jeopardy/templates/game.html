@@ -1,0 +1,94 @@
+<div class="bg" id="game">
+<div class="container">
+  <header class="">
+    <div id="score">Score: {{ score }}</div>
+    <div id="logo-box">
+      <img src="https://people.rit.edu/yxk6281/431/project03/Images/jeopardyLogo.png" alt="" />
+    </div>
+    <div id="quit"><a href="/#/">Quit Game</a></div>
+  </header>
+
+  <!-- <button ng-click="getCurrentClue()" type="button" name="button">get current clue</button> -->
+  <div id="gameboard">
+
+    <div ng-repeat="category in categories" class="col-6">
+      <ul >
+        <li class="category">
+          <div class="card-container">
+            <p>{{ category.data.title }}</p>
+          </div>
+        </li>
+        <clue-card
+          category="{{ category.data.title }}"
+          value="200"
+          question="{{ category.data.clues[0].question }}"
+          answer="{{ category.data.clues[0].answer }}"
+          current="current"
+          >
+        </clue-card>
+        <clue-card
+          category="{{ category.data.title }}"
+          value="400"
+          question="{{ category.data.clues[1].question }}"
+          answer="{{ category.data.clues[1].answer }}"
+          current="current"
+          >
+        </clue-card>
+        <clue-card
+          category="{{ category.data.title }}"
+          value="600"
+          question="{{ category.data.clues[2].question }}"
+          answer="{{ category.data.clues[2].answer }}"
+          current="current"
+          >
+        </clue-card>
+        <clue-card
+          category="{{ category.data.title }}"
+          value="800"
+          question="{{ category.data.clues[3].question }}"
+          answer="{{ category.data.clues[3].answer }}"
+          current="current"
+          >
+        </clue-card>
+        <clue-card
+          category="{{ category.data.title }}"
+          value="1000"
+          question="{{ category.data.clues[4].question }}"
+          answer="{{ category.data.clues[4].answer }}"
+          current="current"
+          >
+        </clue-card>
+      </ul>
+    <!-- </div> -->
+
+
+  </div>
+</div>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        {{ current.category }}
+      </div>
+      <div class="modal-body">
+        <div class="">
+          <p ng-hide="correct || incorrect">{{ current.question }}</p>
+          <p ng-show="correct">Correct!</p>
+          <p ng-show="incorrect">I'm sorry. We were looking for {{ current.answer }}</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="close" class="btn btn-default" data-dismiss="modal">Pass</button>
+        <form ng-submit="submitAnswer(playerInput)" role="form" class="form-inline">
+          <div class="form-group">
+            <input ng-model="playerInput" type="text" class="form-control text-center" name="answer" placeholder="Answer">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -2,16 +2,12 @@ var angular = require('angular');
 var angularRoute = require('angular-route');
 
 angular
-  .module('bootstrapardy', ['ngRoute'])
+  .module('bootstrapardy', ['ngRoute', 'jeopardy'])
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: "templates/home.html",
-        controller: 'MainController'
       });
   });
 
-  require('./controllers/main.controller');
-  require('./directives/clueCardDirective');
-  require('./directives/timerDirective');
-  require('./services/jeopardy.service');
+  require('./jeopardy');

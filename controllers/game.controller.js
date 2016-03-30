@@ -2,7 +2,7 @@ var jQuery = require('jquery');
 
 angular
   .module('bootstrapardy')
-  .controller('MainController', function($scope, JService) {
+  .controller('GameController', function($scope, JService) {
     $scope.current = '';
     $scope.playerInput = '';
     $scope.score = 0;

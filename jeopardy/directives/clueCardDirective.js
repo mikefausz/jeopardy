@@ -1,24 +1,24 @@
 angular
-  .module('bootstrapardy')
-  .directive('clueCard', function() {
+  .module('jeopardy')
+  .directive('clueCard', clueCard);
+
+  function clueCard() {
     return {
-      templateUrl: '../templates/clue-card.html',
+      templateUrl: 'jeopardy/templates/clue-card.html',
       restrict: 'E',
       scope: {
+        category: '@',
         question: '@',
         answer: '@',
         value: '@',
-        this: '=',
         current: '=',
       },
       link: function(scope, element, attributes) {
         element.one('click', function(event) {
-          scope.$parent.$parent.submitted = true;
           scope.$parent.$parent.current = attributes;
           scope.$apply();
           element.children().html('');
         });
-
       }
     };
-  });
+  }
